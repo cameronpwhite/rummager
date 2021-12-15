@@ -1,5 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import {MyHauls} from './haul/MyHauls'
+import {HaulForm} from './haul/HaulForm'
 
 export const ApplicationViews = () => {
     return <>
@@ -9,13 +11,13 @@ export const ApplicationViews = () => {
         }}>
                 {/* <Route exact path="/hauls">
                     <HaulFeed />
-                </Route>
-                <Route exact path="/hauls/new">
+                </Route>*/}
+                <Route exact path="/new">
                     <HaulForm />
                 </Route>
                 <Route exact path="/myhauls">
                     <MyHauls />
-                </Route> */}
+                </Route> 
         </main>
     </>
 }
