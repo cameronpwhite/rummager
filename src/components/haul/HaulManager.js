@@ -8,7 +8,7 @@ export const getHauls = () => {
 }
 
 export const createHaul = (haul) => {
-    return fetch('http://localhost:8000/hauls"', {
+    return fetch('http://localhost:8000/hauls', {
         headers:{
             "Authorization": `Token ${localStorage.getItem('rum_token')}`,
             "Content-Type": 'application/json'
