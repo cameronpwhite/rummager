@@ -7,6 +7,24 @@ export const getHauls = () => {
     .then(response => response.json())
 }
 
+export const getHaul = (haulId) => {
+    return fetch (`http://localhost:8000/hauls/${haulId}`, {
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("rum_token")}`
+        }
+    })
+    .then(response => response.json())
+}
+
+export const getHaulsByUser = () => {
+    return fetch('http://localhost:8000/hauls/user_hauls', {
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("rum_token")}`
+        }
+    })
+    .then(response => response.json())
+}
+
 export const createHaul = (haul) => {
     return fetch('http://localhost:8000/hauls', {
         headers:{
@@ -26,4 +44,15 @@ export const getHaulTags = () => {
         }
     })
     .then(response => response.json())
+}
+
+export const updateHaulFetch = (haul) => {
+    return fetch(`http://localhost:8000/hauls/${haul.id}`, {
+        method: "PUT",
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("rum_token")}`,
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(haul)
+    })
 }

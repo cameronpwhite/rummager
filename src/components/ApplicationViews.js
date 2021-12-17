@@ -17,7 +17,10 @@ export const ApplicationViews = () => {
                 </Route>
                 <Route exact path="/myhauls">
                     <MyHauls />
-                </Route> 
+                </Route>
+                <Route path="/myhauls/:haulId">
+                    <HaulForm />
+                </Route>
         </main>
     </>
 }
