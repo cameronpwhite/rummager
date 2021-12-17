@@ -12,7 +12,7 @@ export const NavBar = () => {
                 <Link className="navbar__link" to="/myhauls">My Hauls</Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/hauls">Haul Feed</Link>
+                <Link className="navbar__link" to="/feed">Haul Feed</Link>
             </li>
             <li className="navbar__item">
                 <Link className="navbar__link" to="/login" onClick={() => localStorage.removeItem("rum_token")}>Logout</Link>

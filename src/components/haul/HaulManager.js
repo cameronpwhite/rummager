@@ -56,3 +56,12 @@ export const updateHaulFetch = (haul) => {
         body: JSON.stringify(haul)
     })
 }
+
+export const deleteHaul = (haulId) => {
+    return fetch(`http://localhost:8000/hauls/${haulId}`, {
+        method: "DELETE",
+        headers: {
+            'Authorization': `Token ${localStorage.getItem('rum_token')}`,
+        }
+    })
+}
