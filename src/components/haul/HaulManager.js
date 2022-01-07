@@ -1,5 +1,5 @@
 export const getHauls = () => {
-    return fetch('https://rummager-client-app.herokuapp.com/hauls', {
+    return fetch('https://rummager-capstone.herokuapp.com/hauls', {
         headers:{
             "Authorization": `Token ${localStorage.getItem("rum_token")}`
         }
@@ -8,7 +8,7 @@ export const getHauls = () => {
 }
 
 export const getHaul = (haulId) => {
-    return fetch (`https://rummager-client-app.herokuapp.com/hauls/${haulId}`, {
+    return fetch (`https://rummager-capstone.herokuapp.com/hauls/${haulId}`, {
         headers: {
             "Authorization": `Token ${localStorage.getItem("rum_token")}`
         }
@@ -17,7 +17,7 @@ export const getHaul = (haulId) => {
 }
 
 export const getHaulsByUser = () => {
-    return fetch('https://rummager-client-app.herokuapp.com/hauls/user_hauls', {
+    return fetch('https://rummager-capstone.herokuapp.com/hauls/user_hauls', {
         headers: {
             "Authorization": `Token ${localStorage.getItem("rum_token")}`
         }
@@ -26,7 +26,7 @@ export const getHaulsByUser = () => {
 }
 
 export const createHaul = (haul) => {
-    return fetch('https://rummager-client-app.herokuapp.com/hauls', {
+    return fetch('https://rummager-capstone.herokuapp.com/hauls', {
         headers:{
             "Authorization": `Token ${localStorage.getItem('rum_token')}`,
             "Content-Type": 'application/json'
@@ -38,7 +38,7 @@ export const createHaul = (haul) => {
 }
 
 export const getHaulTags = () => {
-    return fetch("https://rummager-client-app.herokuapp.com/tags", {
+    return fetch("https://rummager-capstone.herokuapp.com/tags", {
         headers:{
             "Authorization": `Token ${localStorage.getItem("rum_token")}`
         }
@@ -47,7 +47,7 @@ export const getHaulTags = () => {
 }
 
 export const updateHaulFetch = (haul) => {
-    return fetch(`https://rummager-client-app.herokuapp.com/hauls/${haul.id}`, {
+    return fetch(`https://rummager-capstone.herokuapp.com/hauls/${haul.id}`, {
         method: "PUT",
         headers: {
             "Authorization": `Token ${localStorage.getItem("rum_token")}`,
@@ -58,7 +58,7 @@ export const updateHaulFetch = (haul) => {
 }
 
 export const deleteHaul = (haulId) => {
-    return fetch(`https://rummager-client-app.herokuapp.com/hauls/${haulId}`, {
+    return fetch(`https://rummager-capstone.herokuapp.com/hauls/${haulId}`, {
         method: "DELETE",
         headers: {
             'Authorization': `Token ${localStorage.getItem('rum_token')}`,

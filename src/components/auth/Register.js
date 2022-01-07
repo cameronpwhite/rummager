@@ -22,7 +22,7 @@ export const Register = () => {
                 "password": password.current.value
             }
 
-            return fetch("https://rummager-client-app.herokuapp.com/register", {
+            return fetch("https://rummager-capstone.herokuapp.com/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

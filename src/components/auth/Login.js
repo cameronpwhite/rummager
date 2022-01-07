@@ -12,7 +12,7 @@ export const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        return fetch("https://rummager-client-app.herokuapp.com/login", {
+        return fetch("https://rummager-capstone.herokuapp.com/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
